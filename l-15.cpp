@@ -1,0 +1,1 @@
+//2 sum mai index mangte the toh sorting nhi kr skte hai 
