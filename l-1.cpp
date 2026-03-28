@@ -1,5 +1,8 @@
 //method 1: brute force (nested loop)
 
+// Do nested loops chalaye → har pair check karo
+// Agar sum == target → return indices
+
 // class Solution {
 // public:
 //     vector<int> twoSum(vector<int>& nums, int target) {
@@ -22,6 +25,11 @@
 
 
 //method 2: hashmap
+
+// Map banaya → element ko index se store karo
+// For each element → check karo (target - nums[i]) map me hai ya nahi
+// Agar hai → return current index & map value
+// Agar nahi → map me current element store karo
 
 // class Solution {
 // public:
