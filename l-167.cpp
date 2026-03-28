@@ -8,6 +8,9 @@
 // Problem asks for constant space
 // Pair / sum / difference type problem
 
+// Agar array unsorted aur fast lookup chahiye → hashmap use karo
+// Agar array sorted aur constant space chahiye → two pointers use karo
+
 // CANNOT USE HASHMAP - AS ARRAY IS UNSORTED AND CONSTANT SPACE IS REQUIRED IN QUE 
 //SO WE OPT FOR TWO POINTERS
 
