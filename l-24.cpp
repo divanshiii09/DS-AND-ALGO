@@ -66,3 +66,69 @@
 // right array → O(n)
 
 // 👉 Total SC = O(n)
+
+
+//OPTIMIZED 2 POINTER AAPROACH 
+
+// class Solution {
+// public:
+//     int trap(vector<int>& height) {
+//         int n = height.size();
+
+//         int left = 0;            // starting pointer
+//         int right = n - 1;       // ending pointer
+
+//         int leftMax = 0;         // left side ka max
+//         int rightMax = 0;        // right side ka max
+
+//         int water = 0;           // total water
+
+//         while (left <= right) {
+
+//             // agar left height chhoti hai
+//             if (height[left] <= height[right]) {
+
+//                 // agar current height bada hai → update leftMax
+//                 if (height[left] >= leftMax) {
+//                     leftMax = height[left];
+//                 } else {
+//                     // warna water store hoga
+//                     water += leftMax - height[left];
+//                 }
+
+//                 left++; // left pointer aage badhao
+
+//             } else {
+
+//                 // agar right height chhoti hai
+//                 if (height[right] >= rightMax) {
+//                     rightMax = height[right];
+//                 } else {
+//                     // warna water store hoga
+//                     water += rightMax - height[right];
+//                 }
+
+//                 right--; // right pointer peeche lao
+//             }
+//         }
+
+//         return water;
+//     }
+// };
+
+// ⏱️ Time Complexity (TC)
+
+// 👉 O(n)
+
+// Har element ko maximum ek baar visit karte hain
+// left aur right pointers ek dusre ki taraf move karte hain
+// Total iterations ≤ n
+// 💾 Space Complexity (SC)
+
+// 👉 O(1) ✅
+
+// Koi extra array use nahi ho raha
+// Sirf variables use ho rahe hain:
+// left, right
+// leftMax, rightMax
+// water
